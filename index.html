@@ -3,83 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emma Owusu - CS Capstone</title>
+    <title>CS-499 Capstone Portfolio</title>
     <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
-            color: #333;
+            background-color: #f9f9f9;
         }
-        h1, h2 {
-            color: #2c3e50;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        h1 { font-size: 2em; }
-        h2 { font-size: 1.5em; margin-top: 30px; }
-        ul { padding-left: 20px; }
-        .section { margin-bottom: 30px; }
+        
+        h1, h2, h3 {
+            color: var(--primary);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        h2 {
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        ul {
+            padding-left: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .milestone {
+            background-color: var(--light);
+            padding: 1rem;
+            border-left: 4px solid var(--secondary);
+            margin-bottom: 1rem;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .strength-card {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .highlight {
+            background-color: #fffde7;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1rem;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            header {
+                padding: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Emma Owusu</h1>
-    <p>This is my final project for CS-499, Computer Science Capstone at SNHU.</p>
-    
-    <div class="section">
+    <header>
+        <h1>CS-499 Computer Science Capstone</h1>
+        <p>Professional Portfolio & Self-Assessment</p>
+    </header>
+
+    <section>
         <h2>Code Review</h2>
-        <p><strong>Original Application:</strong> Static HTML structure with limitations.</p>
         
-        <h3>Enhancements</h3>
-        <ul>
-            <li><strong>Database Integration (Milestone 1):</strong> MongoDB with Mongoose schemas, data modeling, seeding.</li>
-            <li><strong>RESTful API (Milestone 2):</strong> Structured endpoints, route/controller separation, HTTP methods.</li>
-            <li><strong>Angular SPA (Milestone 3):</strong> Component architecture, reactive forms, routing, services.</li>
-            <li><strong>Authentication (Milestone 4):</strong> JWT tokens, Passport.js, protected endpoints.</li>
-        </ul>
-    </div>
+        <p><strong>1. The original application had a static HTML structure and limitations Implemented.</strong></p>
+        
+        <h3>Enhancements:</h3>
+        
+        <div class="milestone">
+            <h4>2. Database Integration (Milestone 1)</h4>
+            <ul>
+                <li>MongoDB with Mongoose schemas</li>
+                <li>Proper data modeling for trips</li>
+                <li>Database seeding functionality</li>
+            </ul>
+        </div>
+        
+        <div class="milestone">
+            <h4>3. RESTful API (Milestone 2)</h4>
+            <ul>
+                <li>Well-structured API endpoints</li>
+                <li>Separation of routes and controllers</li>
+                <li>Proper use of HTTP methods and status codes</li>
+            </ul>
+        </div>
+        
+        <div class="milestone">
+            <h4>4. Angular SPA (Milestone 3)</h4>
+            <ul>
+                <li>Component-based architecture</li>
+                <li>Reactive forms for data entry</li>
+                <li>Routing and navigation</li>
+                <li>Separation of concerns with services</li>
+            </ul>
+        </div>
+        
+        <div class="milestone">
+            <h4>5. Authentication (Milestone 4)</h4>
+            <ul>
+                <li>JWT token-based authentication</li>
+                <li>Passport.js middleware</li>
+                <li>Protected API endpoints</li>
+                <li>Angular auth service</li>
+            </ul>
+        </div>
+    </section>
 
-    <div class="section">
-        <h2>Strengths of Implementation</h2>
-        <ul>
-            <li><strong>Full-Stack Architecture:</strong> Angular frontend + Express.js backend separation.</li>
-            <li><strong>Data Management:</strong> MongoDB document modeling with Mongoose validation.</li>
-            <li><strong>Security:</strong> JWT authentication, password hashing, protected routes.</li>
-            <li><strong>Code Organization:</strong> Modular components, separation of concerns.</li>
-        </ul>
-    </div>
+    <section>
+        <h2>Strengths of Current Implementation</h2>
+        
+        <div class="strength-card">
+            <h3>1. Full-Stack Architecture</h3>
+            <ul>
+                <li>Clear separation between frontend and backend</li>
+                <li>Proper use of Angular for client-side rendering</li>
+                <li>Express.js for API services</li>
+            </ul>
+        </div>
+        
+        <div class="strength-card">
+            <h3>2. Data Management</h3>
+            <ul>
+                <li>Effective use of MongoDB document model</li>
+                <li>Mongoose schema validation</li>
+                <li>Proper data access patterns</li>
+            </ul>
+        </div>
+        
+        <div class="strength-card">
+            <h3>3. Security</h3>
+            <ul>
+                <li>Secure authentication flow</li>
+                <li>Protected routes on both client and server</li>
+                <li>Proper password hashing</li>
+            </ul>
+        </div>
+        
+        <div class="strength-card">
+            <h3>4. Code Organization</h3>
+            <ul>
+                <li>Modular component structure</li>
+                <li>Separation of concerns</li>
+                <li>Consistent coding patterns</li>
+            </ul>
+        </div>
+    </section>
 
-    <div class="section">
+    <section>
         <h2>Professional Self-Assessment</h2>
-        <p>When I enrolled in SNHU's Computer Science degree, I had no idea how much it would change my thinking and capabilities. This portfolio depicts my transformation from a novice to a confident full-stack developer...</p>
-        <p><strong>The Story Behind Travlr Getaways:</strong> Began as a simple assignment (CS 465) and evolved through enhancements:</p>
-        <ul>
-            <li>Database Integration: Learned data modeling with MongoDB.</li>
-            <li>API Development: Mastered RESTful communication.</li>
-            <li>Angular SPA: Improved UX with dynamic interfaces.</li>
-            <li>Security: Implemented JWT authentication.</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Lessons Learned</h2>
-        <p>Good software development is iterative. For example, authentication token expiration issues led me to research secure yet user-friendly solutions. I now prioritize readable, maintainable code.</p>
+        <p>When I "enrolled" in SNHU's Computer Science degree, I had no idea how much it would change my thinking and capabilities. This portfolio depicts my transformation from an inexperienced novice to a confident full-stack developer. Late nights debugging, "aha" moments when complicated concepts crystallized, and collaborative projects that taught me the value of varied viewpoints - all contributed to my development.</p>
         
-        <h2>Skills Demonstrated</h2>
-        <ul>
-            <li><strong>Software Engineering:</strong> Component-based Angular + Express API architecture.</li>
-            <li><strong>Algorithms:</strong> Optimized queries and data transformations.</li>
-            <li><strong>Database Management:</strong> NoSQL schema design for performance.</li>
-        </ul>
-    </div>
+        <p>What I find most exciting about computer science is how it combines creativity with technical skills. Whether I am designing database structures or building user interfaces, I've learned that good software needs both logical thinking and creative ideas. My focus is always on writing clear and easy-to-maintain code, while keeping in mind the people who will use what I create.</p>
+    </section>
 
-    <div class="section">
+    <section>
+        <h2>The Story Behind My Travlr Getaways Project</h2>
+        <p>The Travlr Getaways travel booking system began as a simple classroom assignment in CS 465, but through enhancements, it evolved into something much more substantial. I remember the first version—basic HTML pages with hardcoded trip data. It worked, but with each new enhancement it became so much more.</p>
+        
+        <p>I chose to feature this project because it perfectly captures my growth as a developer. The enhancements that were implemented represent key milestones in my learning:</p>
+        
+        <p><strong>Database Integration:</strong> Moving from static JSON files to a real MongoDB database taught me the importance of proper data modeling. I spent hours refining my Mongoose schemas to ensure they could handle real-world travel data.</p>
+        
+        <p><strong>API Development:</strong> Building the RESTful API endpoints was like learning a new language—figuring out how the frontend and backend should communicate. I'll never forget the satisfaction when my first successful API call returned actual trip data from the database.</p>
+        
+        <p><strong>Single Page Application:</strong> Converting to an Angular SPA challenged me to think differently about user experience. Watching the interface become more responsive and dynamic was incredibly rewarding.</p>
+        
+        <p><strong>Security Implementation:</strong> Adding authentication was my "aha" moment of application security. Implementing JWT tokens made me appreciate how careful we must be with user data.</p>
+    </section>
+
+    <section>
+        <h2>Lessons Learned</h2>
+        <p>This project taught me that good software development is iterative. My first attempts at some features didn't work as planned, but each challenge became a learning opportunity. For example, when I initially implemented the authentication system, I struggled with token expiration. Through research and experimentation, I found a solution that was both secure and user-friendly.</p>
+        
+        <p>Perhaps most importantly, I learned the value of writing code that others can understand and maintain. My early versions worked but weren't always clear. Through code reviews and refactoring, I developed a style that balances efficiency with readability.</p>
+    </section>
+
+    <section>
+        <h2>Demonstrating My Skills</h2>
+        
+        <h3>Software Engineering</h3>
+        <p>The project's architecture evolved significantly from simple server-rendered pages to a modern component-based Angular frontend with a dedicated API backend. This taught me the importance of separation of concerns and modular design.</p>
+        
+        <h3>Algorithms & Data Structures</h3>
+        <p>Working with the trip data helped me understand how different data structures impact performance. I optimized queries and implemented efficient data transformations to ensure smooth user experiences.</p>
+        
+        <h3>Database Management</h3>
+        <p>Designing the MongoDB schemas gave me hands-on experience with NoSQL databases. I learned how to structure documents for both performance and flexibility—valuable skills for any real-world application.</p>
+    </section>
+
+    <section>
         <h2>Looking Ahead</h2>
-        <p>This project proved I can transform concepts into robust applications. I'm proudest of the authentication system—it taught me real-world security practices. Challenges like debugging and fine-tuning functionalities built my resilience. This is just the beginning of my journey.</p>
-    </div>
+        <p>As I complete my degree, I'm excited to apply these skills in professional settings. This project proved to me that I can take a basic concept and transform it into a robust application. More importantly, it showed me how much I enjoy the problem-solving aspects of development.</p>
+        
+        <p>I'm particularly proud of how the authentication system turned out. Implementing proper security practices gave me confidence that I can build applications that protect user data, which is a crucial skill in today's digital landscape.</p>
+        
+        <p>However, this project wasn't without its challenges. I spent hours and hours troubleshooting, debugging, and fine-tuning various functionalities to ensure they worked properly. The process taught me patience and resilience, pushing me to dig deeper into my problem-solving toolkit.</p>
+        
+        <p>This portfolio represents my journey, but it's just the beginning. I look forward to continuing to learn and grow as I take on new challenges in my career. The Travlr Getaways project will always remind me how far I've come—from simple HTML pages to full-stack applications with proper security and database integration.</p>
+    </section>
 
-    <p>Computer Science Capstone | CS-499 SNHU</p>
+    <footer>
+        &copy; 2025 CS-499 Capstone Portfolio | Southern New Hampshire University
+    </footer>
 </body>
 </html>
